@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Família Tributária - Mentoria exclusiva de Franklim Paixão para contadores dominarem a Reforma Tributária e se tornarem referência.">
+  <meta name="keywords" content="mentoria contábil, reforma tributária, família tributária, franklim paixão, contador, IBS, CBS">
+  <title>Família Tributária - Mentoria Exclusiva | Franklim Paixão</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: #000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    header img {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-left a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-left a:hover {
+      color: #00c4d7;
+    }
+
+    .whatsapp-header {
+      background: #00c4d7;
+      color: #000;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-header:hover {
+      background: #00e0f0;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #000 0%, #222 100%);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.03"/><circle cx="80" cy="80" r="1" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero .subtitle {
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-primary {
+      background: #00c4d7;
+      color: #000;
+      padding: 20px 50px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 25px rgba(0, 196, 215, 0.4);
+      margin-top: 20px;
+    }
+
+    .cta-primary:hover {
+      background: #00e0f0;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 196, 215, 0.6);
+    }
+
+    /* Seções Gerais */
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #000;
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Seção Problemas */
+    .problemas {
+      background: #f8f9fa;
+    }
+
+    .problemas .section-title {
+      color: #d32f2f;
+      margin-bottom: 50px;
+    }
+
+    .problemas-list {
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .problema-item {
+      display: flex;
+      align-items: flex-start;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-left: 4px solid #d32f2f;
+    }
+
+    .problema-item .icon {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      color: #d32f2f;
+    }
+
+    .problema-item p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .problemas-final {
+      text-align: center;
+      font-size: 1.3rem;
+      color: #00c4d7;
+      font-weight: 600;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Sobre a Mentoria */
+    .sobre-mentoria {
+      background: #000;
+      color: #fff;
+    }
+
+    .sobre-mentoria .section-title {
+      color: #00c4d7;
+    }
+
+    .sobre-content {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .sobre-content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .destaque-box {
+      background: rgba(0, 196, 215, 0.1);
+      border: 2px solid #00c4d7;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+
+    .destaque-box p {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #00c4d7;
+      margin: 0;
+    }
+
+    /* Benefícios */
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .beneficio-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+      border-top: 4px solid #00c4d7;
+    }
+
+    .beneficio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    .beneficio-card .icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      color: #00c4d7;
+    }
+
+    .beneficio-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #000;
+      font-weight: 700;
+    }
+
+    .beneficio-card p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Estrutura */
+    .estrutura {
+      background: #f8f9fa;
+    }
+
+    .estrutura-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .estrutura-item {
+      background: #fff;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      border-left: 5px solid #00c4d7;
+    }
+
+    .estrutura-item .icon {
+      font-size: 2rem;
+      margin-right: 20px;
+      color: #00c4d7;
+    }
+
+    .estrutura-item p {
+      font-size: 1.1rem;
+      color: #444;
+      font-weight: 600;
+    }
+
+    /* Depoimentos */
+    .depoimentos {
+      background: #000;
+      color: #fff;
+    }
+
+    .depoimentos .section-title {
+      color: #00c4d7;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .testimonial {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 196, 215, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial:hover {
+      transform: translateY(-5px);
+      border-color: #00c4d7;
+    }
+
+    .testimonial .quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .testimonial .author {
+      font-weight: 700;
+      color: #00c4d7;
+      font-size: 1.1rem;
+    }
+
+    /* Bônus */
+    .bonus {
+      background: #00c4d7;
+      color: #000;
+    }
+
+    .bonus .section-title {
+      color: #000;
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .bonus-card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px 25px;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .bonus-card:hover {
+      background: #fff;
+      border-color: #000;
+      transform: translateY(-5px);
+    }
+
+    .bonus-card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .bonus-card h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .bonus-card p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /* Garantia */
+    .garantia {
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .garantia-box {
+      background: #fff;
+      border: 3px solid #00c4d7;
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .garantia-box::before {
+      content: '🛡️';
+      font-size: 4rem;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      padding: 0 20px;
+    }
+
+    .garantia-box h3 {
+      font-size: 2rem;
+      color: #00c4d7;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .garantia-box p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    /* FAQ */
+    .faq {
+      background: #f8f9fa;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #fff;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .faq-question {
+      padding: 25px;
+      background: #fff;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #000;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question:hover {
+      background: #f8f9fa;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: #00c4d7;
+      font-weight: bold;
+    }
+
+    .faq-question.active::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 25px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background: #f8f9fa;
+    }
+
+    .faq-answer.show {
+      padding: 25px;
+      max-height: 200px;
+    }
+
+    .faq-answer p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* CTA Final */
+    .cta-final {
+      background: linear-gradient(135deg, #000 0%, #222 100%);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .cta-final h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      line-height: 1.3;
+    }
+
+    .cta-final p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
+
+    .cta-final .cta-primary {
+      font-size: 1.3rem;
+      padding: 25px 60px;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer p {
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #00c4d7;
+      text-decoration: none;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+      }
+
+      .nav-left {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .beneficios-grid,
+      .bonus-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-primary {
+        padding: 18px 40px;
+        font-size: 1.1rem;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+    }
+
+    /* Animações */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <a href="index.html"><img src="logo.png" alt="Franklim Paixão - Família Tributária"></a>
+    <div class="nav-left">
+      <a href="index.html">← Voltar</a>
+      <a href="#sobre" onclick="scrollToSection('sobre'); return false;">Sobre</a>
+      <a href="#beneficios" onclick="scrollToSection('beneficios'); return false;">Benefícios</a>
+      <a href="#depoimentos" onclick="scrollToSection('depoimentos'); return false;">Depoimentos</a>
+      <a href="#faq" onclick="scrollToSection('faq'); return false;">FAQ</a>
+      <a href="#inscricao" onclick="scrollToSection('inscricao'); return false;">Inscrição</a>
+    </div>
+    <a href="https://wa.me/5562986429305" class="whatsapp-header" target="_blank">Falar no WhatsApp</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Família Tributária</h1>
+      <p class="subtitle">Prepare-se para a Nova Era da Contabilidade</p>
+      <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Mentoria prática para contadores que querem dominar a Reforma Tributária e se posicionar como referência na sua cidade.</p>
+      <a href="https://wa.me/5562986429305" class="cta-primary" target="_blank">Quero garantir minha vaga agora</a>
+    </div>
+  </section>
+
+  <!-- Problemas -->
+  <section class="problemas">
+    <div class="container">
+      <h2 class="section-title">A Reforma Tributária já começou. E você, está preparado?</h2>
+      
+      <div class="problemas-list">
+        <div class="problema-item">
+          <span class="icon">❌</span>
+          <p>Não entende como o IBS e a CBS vão afetar seus clientes</p>
+        </div>
+        <div class="problema-item">
+          <span class="icon">❌</span>
+          <p>Medo de perder clientes por falta de conhecimento</p>
+        </div>
+        <div class="problema-item">
+          <span class="icon">❌</span>
+          <p>Insegurança sobre como se posicionar como especialista</p>
+        </div>
+        <div class="problema-item">
+          <span class="icon">❌</span>
+          <p>Risco de multas e autuações por falta de preparo</p>
+        </div>
+      </div>
+
+      <div class="problemas-final">
+        <p>Se você se identificou com algum desses pontos, a Mentoria Família Tributária foi feita para você.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre a Mentoria -->
+  <section id="sobre" class="sobre-mentoria">
+    <div class="container">
+      <h2 class="section-title">Sobre a Mentoria</h2>
+      <div class="sobre-content">
+        <p>
+          A Família Tributária é uma mentoria prática e interativa, criada por Franklim Paixão, que prepara contadores para enfrentar as mudanças trazidas pela Reforma Tributária.
+        </p>
+        <p>
+          Você vai aprender na prática, com estudos de caso reais, ferramentas exclusivas e suporte contínuo.
+        </p>
+        
+        <div class="destaque-box">
+          <p>Grupo limitado a 10 participantes para garantir proximidade e acompanhamento individual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section id="beneficios" class="beneficios">
+    <div class="container">
+      <h2 class="section-title">Por que fazer parte da Família Tributária</h2>
+      
+      <div class="beneficios-grid">
+        <div class="beneficio-card animate-on-scroll">
+          <div class="icon">🎯</div>
+          <h3>Clareza Total</h3>
+          <p>Entenda a Reforma Tributária sem juridiquês, com explicações simples e práticas.</p>
+        </div>
+        <div class="beneficio-card animate-on-scroll">
+          <div class="icon">⚡</div>
+          <h3>Aplicação Prática</h3>
+          <p>Estudo de casos reais do dia a dia contábil para aplicar imediatamente.</p>
+        </div>
+        <div class="beneficio-card animate-on-scroll">
+          <div class="icon">🛠️</div>
+          <h3>Ferramentas Exclusivas</h3>
+          <p>Planilhas, simuladores e modelos prontos para usar com seus clientes.</p>
+        </div>
+        <div class="beneficio-card animate-on-scroll">
+          <div class="icon">🏆</div>
+          <h3>Posicionamento Estratégico</h3>
+          <p>Torne-se referência na sua região como especialista em Reforma Tributária.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estrutura -->
+  <section class="estrutura">
+    <div class="container">
+      <h2 class="section-title">Como funciona a mentoria</h2>
+      
+      <div class="estrutura-list">
+        <div class="estrutura-item">
+          <span class="icon">💻</span>
+          <p>Encontros semanais online via Zoom</p>
+        </div>
+        <div class="estrutura-item">
+          <span class="icon">📅</span>
+          <p>Duração de 6 meses</p>
+        </div>
+        <div class="estrutura-item">
+          <span class="icon">📱</span>
+          <p>Grupo exclusivo no WhatsApp para suporte contínuo</p>
+        </div>
+        <div class="estrutura-item">
+          <span class="icon">🤝</span>
+          <p>1 grande encontro presencial no final do programa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="depoimentos">
+    <div class="container">
+      <h2 class="section-title">O que dizem os participantes</h2>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial animate-on-scroll">
+          <p class="quote">"Com a mentoria do Franklim, consegui me antecipar às mudanças e crescer minha carteira de clientes em 40%. Hoje sou referência em Reforma Tributária na minha cidade."</p>
+          <p class="author">– João Silva, Contador</p>
+        </div>
+        <div class="testimonial animate-on-scroll">
+          <p class="quote">"A Família Tributária me deu a segurança que eu precisava. Agora atendo meus clientes com total confiança sobre as novas regras."</p>
+          <p class="author">– Maria Santos, Contadora</p>
+        </div>
+        <div class="testimonial animate-on-scroll">
+          <p class="quote">"O conhecimento adquirido na mentoria me fez aumentar meus honorários em 50%. Investimento que se paga sozinho!"</p>
+          <p class="author">– Carlos Oliveira, Contador</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bônus -->
+  <section class="bonus">
+    <div class="container">
+      <h2 class="section-title">Além do conteúdo principal, você recebe bônus exclusivos</h2>
+      
+      <div class="bonus-grid">
+        <div class="bonus-card">
+          <span class="icon">📊</span>
+          <h4>Simulador Tributário Exclusivo</h4>
+          <p>Ferramenta única para simular cenários da Reforma Tributária</p>
+        </div>
+        <div class="bonus-card">
+          <span class="icon">📚</span>
+          <h4>E-book Reforma Tributária 2025</h4>
+          <p>Guia completo com tudo que você precisa saber</p>
+        </div>
+        <div class="bonus-card">
+          <span class="icon">🎥</span>
+          <h4>Acesso às gravações por 1 ano</h4>
+          <p>Revise o conteúdo quantas vezes quiser</p>
+        </div>
+        <div class="bonus-card">
+          <span class="icon">🤝</span>
+          <h4>Grupo VIP de networking</h4>
+          <p>Conecte-se com outros contadores de elite</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Garantia -->
+  <section class="garantia">
+    <div class="container">
+      <div class="garantia-box">
+        <h3>Garantia de 7 dias</h3>
+        <p>Se em 7 dias você não sentir que a mentoria valeu o investimento, devolvo 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">A mentoria serve para quem está começando?</button>
+          <div class="faq-answer">
+            <p>Sim! A mentoria é pensada tanto para contadores iniciantes quanto experientes. O conteúdo é estruturado de forma progressiva, garantindo que todos acompanhem.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Vou ter acesso às aulas depois?</button>
+          <div class="faq-answer">
+            <p>Sim, você terá acesso às gravações de todas as aulas por 1 ano após o término da mentoria.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Como funcionam os encontros online?</button>
+          <div class="faq-answer">
+            <p>Os encontros são realizados semanalmente via Zoom, sempre com interação ao vivo, resolução de dúvidas e casos práticos.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">E se eu não puder participar ao vivo?</button>
+          <div class="faq-answer">
+            <p>Não tem problema! Todas as aulas são gravadas e disponibilizadas no mesmo dia para que você possa assistir quando quiser.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Como é feito o pagamento?</button>
+          <div class="faq-answer">
+            <p>O pagamento pode ser feito via PIX, cartão de crédito ou transferência bancária. Entre em contato pelo WhatsApp para mais detalhes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section id="inscricao" class="cta-final">
+    <div class="container">
+      <h2>A Reforma Tributária já começou.</h2>
+      <p>Não espere para se preparar. Faça parte da Família Tributária hoje mesmo!</p>
+      <a href="https://wa.me/5562986429305" class="cta-primary" target="_blank">Quero fazer parte agora</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Franklim Paixão - Família Tributária | Todos os direitos reservados</p>
+    <p>Desenvolvido com ❤️ para transformar a contabilidade brasileira</p>
+  </footer>
+
+  <script>
+    // Função para scroll suave
+    function scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const isOpen = answer.classList.contains('show');
+        
+        // Fechar todas as outras FAQs
+        document.querySelectorAll('.faq-answer').forEach(ans => {
+          ans.classList.remove('show');
+        });
+        document.querySelectorAll('.faq-question').forEach(q => {
+          q.classList.remove('active');
+        });
+        
+        // Toggle da FAQ clicada
+        if (!isOpen) {
+          answer.classList.add('show');
+          button.classList.add('active');
+        }
+      });
+    });
+
+    // Animação ao scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+        }
+      });
+    }, observerOptions);
+
+    // Observar elementos para animação
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.style.background = 'rgba(0, 0, 0, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+      } else {
+        header.style.background = '#000';
+        header.style.backdropFilter = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
