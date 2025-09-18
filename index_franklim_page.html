@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Franklim Paixão - Contador, mentor e especialista em Reforma Tributária. Sócio da PAC Inteligência Tributária e fundador da FP Educação Contábil.">
+  <meta name="keywords" content="contador, reforma tributária, planejamento tributário, mentoria contábil, lucro real, simples nacional">
+  <title>Franklim Paixão - Transformando Contabilidade em Estratégia Tributária</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: #000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    header img {
+      height: 50px;
+      width: auto;
+    }
+
+    header nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    header nav a:hover {
+      color: #00c4d7;
+    }
+
+    header nav a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 50%;
+      background-color: #00c4d7;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    header nav a:hover:after {
+      width: 100%;
+    }
+
+    /* Link especial para Família Tributária no menu */
+    .mentoria-menu {
+      background: #00c4d7 !important;
+      color: #000 !important;
+      padding: 8px 16px !important;
+      border-radius: 20px !important;
+      font-weight: 700 !important;
+    }
+
+    .mentoria-menu:hover {
+      background: #00e0f0 !important;
+      transform: translateY(-2px);
+    }
+
+    /* Menu Mobile */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .mobile-menu span {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #000 0%, #222 100%);
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.03"/><circle cx="80" cy="80" r="1" fill="%23ffffff" opacity="0.03"/><circle cx="40" cy="60" r="1" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero .subtitle {
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      background: #00c4d7;
+      color: #000;
+      padding: 18px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 6px 20px rgba(0, 196, 215, 0.4);
+    }
+
+    .cta-button:hover {
+      background: #00e0f0;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 196, 215, 0.6);
+    }
+
+    /* Seções Gerais */
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #00c4d7;
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Seção Sobre */
+    .sobre {
+      background: #f8f9fa;
+    }
+
+    .sobre-content {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .sobre-content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+      color: #444;
+    }
+
+    .sobre-content .highlight {
+      color: #00c4d7;
+      font-weight: 700;
+    }
+
+    /* Cards de Áreas */
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .area-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+      border-top: 4px solid #00c4d7;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .area-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 196, 215, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .area-card:hover::before {
+      left: 100%;
+    }
+
+    .area-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    .area-card .icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .area-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #000;
+      font-weight: 700;
+    }
+
+    .area-card p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    .area-card .highlight-text {
+      color: #00c4d7;
+      font-weight: 600;
+    }
+
+    /* Link para Família Tributária */
+    .mentoria-link {
+      display: inline-block;
+      background: #00c4d7;
+      color: #000;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+    }
+
+    .mentoria-link:hover {
+      background: #00e0f0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 196, 215, 0.4);
+    }
+
+    /* Seção Depoimentos */
+    .depoimentos {
+      background: linear-gradient(135deg, #000 0%, #222 100%);
+      color: #fff;
+    }
+
+    .depoimentos .section-title {
+      color: #00c4d7;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .testimonial {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 196, 215, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial:hover {
+      transform: translateY(-5px);
+      border-color: #00c4d7;
+    }
+
+    .testimonial .quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .testimonial .author {
+      font-weight: 700;
+      color: #00c4d7;
+      font-size: 1.1rem;
+    }
+
+    /* CTA Final */
+    .cta-final {
+      background: #00c4d7;
+      color: #000;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .cta-final h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .cta-final p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
+
+    .cta-final .cta-button {
+      background: #000;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .cta-final .cta-button:hover {
+      background: #222;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-social {
+      margin-bottom: 30px;
+    }
+
+    .footer-social a {
+      color: #00c4d7;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      color: #00e0f0;
+    }
+
+    .footer-text {
+      font-size: 0.95rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .footer-text p {
+      margin-bottom: 10px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+      
+      header nav {
+        display: none;
+      }
+      
+      .mobile-menu {
+        display: flex;
+      }
+      
+      .hero {
+        padding: 80px 20px 60px;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .hero .subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+      
+      .areas-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .cta-final h2 {
+        font-size: 2rem;
+      }
+      
+      .cta-final p {
+        font-size: 1.1rem;
+      }
+      
+      section {
+        padding: 60px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .cta-button {
+        padding: 15px 30px;
+        font-size: 1rem;
+      }
+      
+      .area-card {
+        padding: 30px 20px;
+      }
+      
+      .testimonial {
+        padding: 30px 20px;
+      }
+    }
+
+    /* Animações */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <img src="logo.png" alt="Franklim Paixão - Contador">
+    <nav>
+      <a href="#sobre" onclick="scrollToSection('sobre'); return false;">Sobre</a>
+      <a href="#areas" onclick="scrollToSection('areas'); return false;">Áreas</a>
+      <a href="#depoimentos" onclick="scrollToSection('depoimentos'); return false;">Depoimentos</a>
+      <a href="familia-tributaria.html" class="mentoria-menu">Família Tributária</a>
+      <a href="#contato" onclick="scrollToSection('contato'); return false;">Contato</a>
+    </nav>
+    <div class="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Franklim Paixão</h1>
+      <p class="subtitle">Transformando contabilidade em estratégia tributária</p>
+      <p style="font-size: 1.1rem; margin-bottom: 40px; opacity: 0.9;">Mentor e especialista em Reforma Tributária, ajudando contadores e empresários a crescerem com segurança e inovação.</p>
+      <a href="https://wa.me/5562986429305" class="cta-button" target="_blank">Fale comigo no WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2 class="section-title">Sobre Mim</h2>
+      <div class="sobre-content">
+        <p>
+          Sou contador, mentor e professor, apaixonado por ensinar e transformar a forma como empresas e contadores enxergam a contabilidade.
+        </p>
+        <p>
+          <span class="highlight">Sócio da PAC Inteligência Tributária</span> e <span class="highlight">fundador da FP Educação Contábil</span>, trabalho há anos ajudando profissionais e empresários a navegarem com segurança pelo complexo mundo tributário brasileiro.
+        </p>
+        <p>
+          Especialista em <span class="highlight">Reforma Tributária</span>, <span class="highlight">Lucro Real</span> e <span class="highlight">Simples Nacional</span>, minha missão é democratizar o conhecimento contábil e tributário, capacitando pessoas a tomarem decisões mais inteligentes e estratégicas em seus negócios.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Áreas de Atuação -->
+  <section id="areas">
+    <div class="container">
+      <h2 class="section-title">Áreas de Atuação</h2>
+      <p class="section-subtitle">Conheça como posso ajudar você e sua empresa a crescer com inteligência tributária</p>
+      
+      <div class="areas-grid">
+        <div class="area-card animate-on-scroll">
+          <div class="icon">🏢</div>
+          <h3>Consultoria Empresarial</h3>
+          <p>Planejamento tributário estratégico, abertura e regularização de empresas, com <span class="highlight-text">foco especializado em oficinas mecânicas</span> e negócios locais. Ajudo empresários a otimizar sua carga tributária de forma legal e segura.</p>
+        </div>
+        
+        <div class="area-card animate-on-scroll">
+          <div class="icon">🎓</div>
+          <h3>Educação Contábil</h3>
+          <p>Cursos e mentorias práticas para contadores e empresários. Destaque para a mentoria <span class="highlight-text">"Família Tributária FP"</span>, além de treinamentos presenciais e online que transformam conhecimento em resultados reais.</p>
+          <div style="margin-top: 20px;">
+            <a href="familia-tributaria.html" class="mentoria-link">Conheça a Família Tributária →</a>
+          </div>
+        </div>
+        
+        <div class="area-card animate-on-scroll">
+          <div class="icon">🚀</div>
+          <h3>Tecnologia e Inovação</h3>
+          <p>Criação e desenvolvimento de sistemas que otimizam a rotina contábil, como <span class="highlight-text">PrecificaMEC</span>, <span class="highlight-text">PAC no Bolso</span> e <span class="highlight-text">Economizaê</span>. Inovação tecnológica a serviço da eficiência contábil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="depoimentos">
+    <div class="container">
+      <h2 class="section-title">O que dizem sobre meu trabalho</h2>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial animate-on-scroll">
+          <p class="quote">"Com a mentoria do Franklim, consegui me preparar para a Reforma Tributária e aumentar minha carteira de clientes em 40%. Profissional excepcional e sempre atualizado."</p>
+          <p class="author">– João Silva, Contador</p>
+        </div>
+        
+        <div class="testimonial animate-on-scroll">
+          <p class="quote">"O planejamento tributário feito pelo Franklim reduziu nossos custos em 30% no primeiro ano. Investimento que se paga sozinho!"</p>
+          <p class="author">– Maria Santos, Empresária</p>
+        </div>
+        
+        <div class="testimonial animate-on-scroll">
+          <p class="quote">"As ferramentas desenvolvidas pelo Franklim otimizaram nossa rotina contábil. Economia de tempo e aumento da produtividade foram imediatos."</p>
+          <p class="author">– Carlos Oliveira, Dono de Oficina Mecânica</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-final" id="contato">
+    <div class="container">
+      <h2>Pronto para Transformar Seu Negócio?</h2>
+      <p>Entre em contato comigo pelo WhatsApp e vamos conversar sobre como posso ajudar você a crescer com segurança e inovação.</p>
+      <a href="https://wa.me/5562986429305" class="cta-button" target="_blank">Falar no WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://instagram.com/franklim.contador" target="_blank">@franklim.contador</a>
+        <a href="https://wa.me/5562986429305" target="_blank">WhatsApp</a>
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2025 Franklim Paixão | Todos os direitos reservados</p>
+        <p>Desenvolvido com ❤️ para transformar a contabilidade brasileira</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Função específica para scroll
+    function scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // Navegação suave (fallback)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+        
+        return false;
+      });
+    });
+
+    // Animação ao scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+        }
+      });
+    }, observerOptions);
+
+    // Observar elementos para animação
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Header scroll effect
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.style.background = 'rgba(0, 0, 0, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+      } else {
+        header.style.background = '#000';
+        header.style.backdropFilter = 'none';
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Mobile menu toggle (básico)
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const nav = document.querySelector('header nav');
+    
+    if (mobileMenu && nav) {
+      mobileMenu.addEventListener('click', () => {
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      });
+    }
+
+    // Smooth reveal animations
+    const cards = document.querySelectorAll('.area-card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.style.animationDelay = `${index * 0.2}s`;
+      }, 100);
+    });
+  </script>
+
+</body>
+</html>
